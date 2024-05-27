@@ -1,0 +1,21 @@
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Topic</th>
+            <th>Links</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(content of contents;track content){
+        <tr>
+            <td>{{content.topic}}</td>
+            <td>
+                <ul>@for(link of content.urls;track link){
+                    <li><a [href]="link" target="_blank">{{link}}</a></li>
+                }
+                </ul>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

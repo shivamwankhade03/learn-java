@@ -1,0 +1,59 @@
+/* .wrapper {
+    position: relative;
+    height: 100vh; 
+    width: 100%;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 20%;
+}
+
+.contentBar{
+    position: relative;;
+    width: 80%;
+} */
+
+/* body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+} */
+
+.row {
+    display: flex;
+    /* Use flex layout for the row */
+    flex-wrap: nowrap;
+    /* Prevents the flex items/columns from wrapping onto new lines */
+    height: 100%;
+    /* Ensure row takes up full height */
+    width: 100%;
+    /* Ensure row takes up full width */
+}
+
+.sidebar {
+    flex: 0 0 20%;
+    /* flex-grow, flex-shrink, flex-basis */
+    height: 100vh;
+    /* Makes sidebar span full height of viewport */
+    overflow-x: hidden;
+    /* Stop horizontal scroll bar */
+    overflow-y: auto;
+    /* If there is too much content for the viewport height, vertical scroll bar will appear */
+    position: relative;
+    /*remove if you don't need*/
+    /* set any additional desired styles: background-color, etc */
+}
+
+.contentBar {
+    flex: 1;
+    /* Will consume 80% remaining space*/
+    overflow-x: hidden;
+    padding-top: 2%;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    /* Stop horizontal scroll bar */
+    /* set any additional desired styles: padding, etc */
+}
